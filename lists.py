@@ -1,4 +1,4 @@
-# import copy
+import copy
 
 #Списки(List)
 
@@ -130,12 +130,3 @@
 # print(my_list)   # [23, 54, 23, 53, 99, 11]
 # print(copied_list) # [23, 54, 23, 53, 99]
 # print(deep_copy) # [23, 54, 23, 53, 99]
-
-#
-# my_list = [1, 5]
-#
-# del my_list[1] # Удаляет по индексу, del это инструкция.Не Метод.
-#
-# my_list.__delitem__(0) #Магический метод метод равносильный инструкции del
-#
-# print(my_list)

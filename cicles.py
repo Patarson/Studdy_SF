@@ -129,10 +129,10 @@
 # print(all_nums)
 
                 # Пример 2 с сокращённым циклом
-
+#
 # all_nums = [-3, 1, 0, 10, 20 , - 20, 5, -2]
 #
-# absolute_nums = [abs(num) for num in all_nums]
+# absolute_nums = [abs(num) for num in all_nums]  #abs() - Приводит отрицательные цифры в положительные - на +
 #
 # print(absolute_nums)
 # print(all_nums)

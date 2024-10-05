@@ -1,4 +1,5 @@
                             #ФУНКИЦЯ ZIP
+
 # fruits = ['apple', 'banana', 'lime']
 #
 # qty = [100, 70, 50]
@@ -12,8 +13,11 @@
 # fruit_qtys_dict = dict(fruits_qtys_zip)
 #
 # print(fruit_qtys_dict)
+
                         # ФУНКЦИИ В PYTHON
+
 # Функция это блок кода,который можно выполнять многократно
+
 # def my_fn(a, b):
 #     a = a + 1
 #     c = a + b
@@ -23,7 +27,9 @@
 # res = my_fn(3, 5)
 #
 # print(res)
-#             #Задача
+
+#                                           #Задача
+
 # def merge_list_to_dict(list_one, list_two):
 #     merge = zip(list_one, list_two)
 #     list_to_dict = dict(merge)
@@ -32,7 +38,9 @@
 #
 # res = merge_list_to_dict(['Brand', 'Model', 'Price'], ['Apple', 'IPhone 12', 1200])
 # print(res)
-#Задача № 1
+
+                                        #Задача № 1
+
 # def merge_list_to_dict(list_one, list_two):
 #     return dict(zip(list_one, list_two))
 #
@@ -42,11 +50,13 @@
 # print(res_one)
 #
 # res_two = merge_list_to_dict(list_two=['Apple', 'IPhone 12', 1200], list_one=['Brand', 'Model', 'Price'])
-# #Если оба аргумента именованные порядок следования не важен.
+
+                # #Если оба аргумента именованные порядок следования не важен.
+
 # print(res_one)
 #
 # res_three = merge_list_to_dict(['Brand', 'Model', 'Price'], list_two=['Apple', 'IPhone 12', 1200])
-# #Сначала идёт позиционный аргумент,и только потом именованный,иначе ошибка
+#               #Сначала идёт позиционный аргумент,и только потом именованный,иначе ошибка
 # print(res_three)
 #    #Задача № 2
 
@@ -56,7 +66,8 @@
 #
 #
 # print(update_car_info(brand='BMW', price=10000)) # Вызываем функицию и передаём ей нужные нам аргументы с ключевыми словами.
-# Значения функции по умолчанию:
+
+#                                           Значения функции по умолчанию:
 #
 # def mult_by_factor(value, multiplier=1):  # multiplier - необязательный аргумент,так как в функции он установлен по умолчанию = 1.
 #     return value * multiplier  #Часто значению по умолчанию присваивают None,если хотят сделать его необязательным.
@@ -88,8 +99,9 @@
 # post_with_weekday = create_new_post(initial_post)
 #
 # print(post_with_weekday)
-#Callback Function
-#Функция,которая передаётся как аргумент в другую функцию,и там вызывается.
+                                        #Callback Function
+                #Функция,которая передаётся как аргумент в другую функцию,и там вызывается.
+
 # def other_fn():
 #     pass
 #
@@ -131,12 +143,18 @@
 #
 #
 # process_data({'Name': 'Robert'}, send_date)
-#                                         Правила работы с функциями
+                                # Правила работы с функциями
+
 # 1.Называть функции исходя из выполняемых задач
+
 # 2.Название функции начинать с глагола
+
 # 3.Одна функция должна выполнять одну задачу
+
 # 4.Не рекомендуется изменять внешние относительно функции переменные
-#Документация функции(Dockstring)
+
+                                # Документация функции(Dockstring)
+
 # # Синтаксис
 # def mult_by_factor(value, mult=1):
 #     """Multiplies number by multiplicator"""   #Коментарий как работает функция
@@ -145,8 +163,8 @@
 #
 # print(mult_by_factor(5, 25))
 
-#Области видимости
-#Глобальные и локальные
+                                            #Области видимости
+                                          #Глобальные и локальные
 
 # a = 10  # Глобальная переменная и область видимости
 #
@@ -155,13 +173,13 @@
 #     global a  # Перезаписывает переменную а из глобальной области видимости
 #     a = True  # Локальная
 #     b = 15  # Область
-#     print(a)  # Видимости
-#     print(b)  # Функции
-#
-#
+#     print(a)  # Видимости  #  True
+#     print(b)  # Функции  # 15
+# #
+# #
 # my_fn()
 #
-# print(a)
+# print(a)  #True так как в функции мы перезаписали глобальную переменную
 # print(b) # NameError: name 'b' is not defined переменная b объявлена в области видимости функции
 
 # c = 5
@@ -182,6 +200,7 @@
 # # # print(a)  # NameError: name 'a' is not defined
 
                                     #Lambda function
+
 # def mult(a, b):
 #     return a * b
 #
@@ -203,4 +222,4 @@
 #
 # print(evening_greeting('Denys'))
 
-
+                                    # Нелокальная область видимости

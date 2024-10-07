@@ -1,17 +1,17 @@
                             #ФУНКИЦЯ ZIP
 
 # fruits = ['apple', 'banana', 'lime']
-#
+
 # qty = [100, 70, 50]
-#
+
 # fruits_qtys_zip = zip(fruits, qty) # Обьеденяет обьекты в 1,может быть любого типа
-#
-# print(fruits_qtys_zip)
-#
-# print(type(fruits_qtys_zip))
-#
-# fruit_qtys_dict = dict(fruits_qtys_zip)
-#
+
+# print(fruits_qtys_zip) #  <zip object at 0x000002A63EF7BAC0>
+
+# print(type(fruits_qtys_zip))   # <class 'zip'>
+
+# fruit_qtys_dict = dict(fruits_qtys_zip)  # {'apple': 100, 'banana': 70, 'lime': 50}
+
 # print(fruit_qtys_dict)
 
                         # ФУНКЦИИ В PYTHON
@@ -22,20 +22,20 @@
 #     a = a + 1
 #     c = a + b
 #     return c
-#
-#
+
+
 # res = my_fn(3, 5)
-#
+
 # print(res)
 
-#                                           #Задача
+                                           # Задача
 
 # def merge_list_to_dict(list_one, list_two):
 #     merge = zip(list_one, list_two)
 #     list_to_dict = dict(merge)
 #     return list_to_dict
-#
-#
+
+
 # res = merge_list_to_dict(['Brand', 'Model', 'Price'], ['Apple', 'IPhone 12', 1200])
 # print(res)
 

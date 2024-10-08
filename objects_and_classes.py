@@ -156,7 +156,7 @@
 # print(eggs.category)   # food
 # print(eggs.max_qty)  # 10000
 
-                            # 4.ПОЛИМОРФИЗ
+                            # 3.ПОЛИМОРФИЗ
 
 # Полиморфизм — это способность объектов разных классов использовать один и тот же интерфейс (методы).
 # Разные классы могут реализовывать один и тот же метод по-разному.
@@ -184,3 +184,121 @@
 
             # Еще немного о полиморфизме и магических методах на примере __eq__ и __str__
 
+#   __eq__ — определяет поведение оператора равенства ==;
+#   __str__ — определяет поведение функции str() или вызов внутри функции print().
+
+# class Dot:
+#     def __init__(self, x, y):
+#         self.x = x
+#         self.y = y
+#
+#     def __eq__(self, other):  # Проверяем равенство между параметрами
+#         return self.x == other.y and self.y == other.y
+#
+#     def __str__(self):  #Конвертируем результат в строку
+#         return f"Dot: {self.x, self.y}"
+#
+#
+# p1 = Dot(1, 2)  # Присваиваем обьекты класса
+# p2 = Dot(1, 2)  # Присваиваем обьекты класса
+#
+# print(p1 == p2)    # Проверяем равенство == False
+# print(str(p1))   # Dot: (1, 2)
+# print(p2)    # Dot: (1, 2)
+
+                        # Задание 1.10.
+
+# Создайте класс одной из геометрических фигур (например, прямоугольника), где в конструкторе задаются атрибуты:
+# начальные координаты x, y, width и height (или другие в зависимости от выбранной фигуры).
+# Создайте метод, который возвращает атрибуты прямоугольника как строку ( постарайтесь применить магический метод __str__).
+# Для объекта прямоугольника со значениями атрибута x = 5, y = 10, width = 50, height = 100 метод должен вернуть строку Rectangle : 5, 10, 50, 100.
+
+# class Rectangle:
+#     def __init__(self, x, y, width, height): #Инициируем параметры
+#         self.x = x
+#         self.y = y
+#         self.width = width
+#         self.height = height
+#
+#     def __str__(self):  # Возвращаем полученные параметры в виде строки
+#         return f"Rectangle: {self.x}, {self.y}, {self.width}, {self.height}"  #
+#
+#
+# react_1 = Rectangle(5, 10, 50, 100)
+# print(react_1)
+
+                        # Задание 1.10.2
+
+# В классе, написанном в предыдущем задании, создайте метод, который будет рассчитывать площадь фигуры. Выведите значение площади на экран.
+
+# class Rectangle:
+#     def __init__(self, x, y, width, height):
+#         self.x = x
+#         self.y = y
+#         self.width = width
+#         self.height = height
+#
+#     def __str__(self):
+#         return f"Rectangle: {self.x}, {self.y}, {self.width}, {self.height}"
+#
+#     def get_area(self):  #Рассчитываем площадь фигуры по формуре  S = a × h, где a — сторона, h — высота
+#         return self.width * self.height
+#
+#
+# react_1 = Rectangle(5, 10, 50, 100)
+# print(react_1)
+# print(react_1.get_area())
+
+
+                            # Задание 1.10.3
+#В проекте «Дом питомца» добавим новую услугу — электронный кошелек. Необходимо создать класс «Клиент», который будет содержать данные о клиентах и их финансовых операциях.
+# О клиенте известна следующая информация: имя, фамилия, город, баланс.
+#Далее сделайте вывод о клиентах в консоль в формате:
+
+# «Иван Петров. Москва. Баланс: 50 руб.»
+
+
+# class Client:
+#     def __init__(self, name, surname, city, balance):  #Инициируем параметры
+#         self.name = name  # Имя
+#         self.surname = surname # Фамилия
+#         self.city = city # Город
+#         self.balance = balance # Баланс
+#
+#     def __str__(self):   #Возвращаем результат в виде строки с данными
+#         return f'{self.name} {self.surname}.\nCity: {self.city}.\nBalance: {self.balance} RUB'
+#
+#
+# person = Client('Ivan', 'Petrov', 'Moscow', 50)
+# print(person)
+
+
+                            # Задание 1.10.4
+
+# Команда проекта «Дом питомца» планирует большой корпоратив для своих клиентов.
+# Вам необходимо написать программу, которая позволит составить список гостей.
+# В класс «Клиент» добавьте метод, который будет возвращать информацию только об имени, фамилии и городе клиента.
+
+# Затем создайте список, в который будут добавлены все клиенты, и выведете его в консоль.
+
+# class Client:
+#     def __init__(self, name, surname, city, balance):
+#         self.name = name
+#         self.surname = surname
+#         self.city = city
+#         self.balance = balance
+#
+#     def __str__(self):
+#         return f'{self.name} {self.surname}.City: {self.city}.Balance: {self.balance} RUB'
+#
+#     def get_quest(self):   # Добавляем метод который возвращает только имя,фамилию и город
+#         return f'{self.name} {self.surname}. City: {self.city}.'
+
+
+# customer_1 = Client('Denys', 'Patarson', 'Kanada', 1200)
+# customer_2 = Client('Ivan', 'Petrov', 'Moscow', 100)
+# customer_3 = Client('Katrin', 'Ashanina', 'Moscow', 1200)
+#
+# customer_lists = [customer_3, customer_2, customer_1] # Добавляем всех гостей в список
+# for quest in customer_lists:    #Проходим циклом по гостям из нашего списка
+#     print(quest.get_quest())   # И выводим нужную информацию из метода get_quest()
